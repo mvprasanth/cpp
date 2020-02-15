@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+inline int cube(int s) 
+{ 
+    return s*s*s; 
+} 
+bool primeNum(int inVal)
+{
+    int i =0;
+    for(i = 2;i <= (inVal/2); i++)
+    {
+        if(inVal % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int main() 
+{ 
+    int s = 0;
+    cout << "Enter the input value" << "\n";
+    cin >> s;
+    cout << "The cube of 3 is: " << cube(s) << "\n"; 
+    for(int i = 1;i<=s;i++)
+    {
+        if(primeNum(i) == true)
+         cout<<"\t" << i;  
+    }
+    return 0; 
+} 
